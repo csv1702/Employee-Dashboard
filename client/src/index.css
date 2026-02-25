@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700&display=swap");
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+:root {
+  color-scheme: light;
+  --bg: #f4f7fb;
+  --bg-elevated: #ffffff;
+  --bg-muted: #edf2f8;
+  --bg-glow: rgba(47, 123, 245, 0.18);
+  --bg-glow-secondary: rgba(23, 175, 138, 0.14);
+  --border-subtle: #dfe6f0;
+  --text-primary: #101828;
+  --text-secondary: #44546a;
+  --text-muted: #6b7280;
+}
+
+.dark {
+  color-scheme: dark;
+  --bg: #070e1b;
+  --bg-elevated: #111b2d;
+  --bg-muted: #1a2a42;
+  --bg-glow: rgba(47, 123, 245, 0.25);
+  --bg-glow-secondary: rgba(23, 175, 138, 0.2);
+  --border-subtle: #283853;
+  --text-primary: #e6ecf5;
+  --text-secondary: #c4cdd9;
+  --text-muted: #8c9cb0;
+}
+
+* {
+  border-color: var(--border-subtle);
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Manrope", "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  color: var(--text-primary);
+  transition: background-color 300ms ease, color 300ms ease;
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(circle at 0% 0%, var(--bg-glow) 0%, rgba(255, 255, 255, 0) 40%),
+    radial-gradient(
+      circle at 100% 0%,
+      var(--bg-glow-secondary) 0%,
+      rgba(255, 255, 255, 0) 36%
+    );
+  background-attachment: fixed;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-family: "Sora", "Manrope", "Segoe UI", sans-serif;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+p,
+span,
+label {
+  color: var(--text-secondary);
+}
+
+::selection {
+  background-color: #bfdbfe;
+  color: #0f172a;
+}
+
+.surface-card {
+  border: 1px solid var(--border-subtle);
+  border-radius: 1.5rem;
+  background: var(--bg-elevated);
+  box-shadow: 0 6px 20px -12px rgba(15, 23, 42, 0.25);
+}
+
+.surface-muted {
+  border: 1px solid var(--border-subtle);
+  border-radius: 1rem;
+  background: var(--bg-muted);
+}
+
+.focus-ring {
+  outline: none;
+}
+
+.focus-ring:focus-visible {
+  box-shadow: 0 0 0 2px rgba(47, 123, 245, 0.5), 0 0 0 4px var(--bg);
+}
+
+.page-title {
+  font-size: clamp(1.5rem, 1.25rem + 1vw, 2rem);
+  font-weight: 600;
+}
+
+.page-subtitle {
+  margin-top: 0.35rem;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
