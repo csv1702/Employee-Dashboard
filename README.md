@@ -1,6 +1,7 @@
 # MERN Employee Dashboard
 
 Live Demo: https://mern-employee-dashboard.netlify.app/
+
 Demo Video: https://drive.google.com/file/d/1SZaC2wFH5b8_dCAmxsR-ijpkZzBdedLq/view?usp=sharing
 
 A responsive employee dashboard built with React + Vite. It includes login, employee listing, profile details, salary chart, map view, and webcam photo capture.
